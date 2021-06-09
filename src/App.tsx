@@ -1,16 +1,32 @@
 import React from "react";
+import { useState } from "react";
 import "./App.css";
 
 export const App = () => {
 	// 1 - Como carregar um conteudo da web usando fetch?
+
 	// 2 - Como usar dados da web no react?
+
 	// 3 - O que é useState?
+	//is a function that allow to have state varibles.
+	// declare a new variable of state named "pageState"
+	const [todoData, setTodoData] = useState([{ title: "Gato" }]);
+
+	fetch("https://jsonplaceholder.typicode.com/todos/")
+		.then((response) => response.json())
+		.then((json) => setTodoData(json));
+
 	// 4 - O que é array.map em javascript?
+	// Is a method that operate a function for each element of the the array
+
 	// https://jsonplaceholder.typicode.com/todos/
 
 	// dicas
 	const meuNome = "Samuel Andrade"; // var bind
-	const item1e2 = ["Item 1", "Item 2"]; // array map
+
+	/*
+
+	*/
 
 	return (
 		<section>
@@ -23,8 +39,8 @@ export const App = () => {
 					<div style={{ display: "flex", flexDirection: "column" }}>
 						<h2>Main Container</h2>
 						<ul>
-							{item1e2.map((item) => (
-								<li>{item}</li>
+							{todoData.map((item) => (
+								<li>{item.title}</li>
 							))}
 							<li>Item 3</li>
 							<li>Item 4</li>
