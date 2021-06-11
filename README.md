@@ -32,8 +32,8 @@ GET     | Request to search of one or many resources.  				 | Resource data |
 POST    | Request to submit a specified resource. Can change state or case side effeccts on the server |
 PUT    | Request to replace all current representations of the target  |
 PATCH    | Request to apply partial modifications to a resource |
-DELETE | Reqeust to delete a specified resource |
-OPTIONS | Reqeust to describe the communication options | show allowed methods
+DELETE | Request to delete a specified resource |
+OPTIONS | Request to describe the communication options | show allowed methods
 
 ### Web assembly
 
